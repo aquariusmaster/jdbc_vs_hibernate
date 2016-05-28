@@ -1,10 +1,18 @@
 package domain;
 
+import javax.persistence.*;
+
 /**
  * Created by harkonnen on 27.05.16.
  */
+@Entity
+@Table(name="Room")
 public class Room {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="id")
     private int id;
+    @Column(name="room_name")
     private String room_name;
 
     public Room() {
